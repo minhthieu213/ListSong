@@ -1,0 +1,155 @@
+:root{
+    --primary-color: #ec1f55;
+    --text-color: #333;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+.player{
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.dashboard{
+    top: 0;
+    width: 100%;
+    max-width: 480px;
+    position: fixed;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: white;
+}
+
+header{
+    text-align: center;
+}
+
+.cd{
+    display: flex;
+    margin: 10px auto;
+    width: 200px;
+}
+
+.cd-thumb{
+    width: 100%;
+    padding-top: 100%;
+    background-color: #333;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.player .icon-pause{
+    display: none;
+}
+
+.player.playing .icon-play{
+    display: none;
+}
+
+.player.playing .icon-pause{
+    display: inline-block;
+}
+
+.control{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.control .btn{
+    font-size: 18px;
+    padding: 18px;
+    color: rgb(102, 102, 102);
+}
+
+.btn-toggle-play .icon-pause{
+    display: none;
+}
+
+.progress{
+    display: block;
+    width: 100%;
+    outline: none;
+    height: 6px;
+    appearance: none;
+    background-color: rgb(211, 211, 211);
+}
+
+.progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 12px;
+    height: 6px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+
+.playlist{
+    margin-top: 408px;
+    padding: 12px;
+}
+
+.song{
+    background-color: white;
+    padding: 8px 16px;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.song:hover{
+    cursor: pointer;
+}
+
+.song .thumb{
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background-size: cover;
+    font-size: 16px;
+}
+
+.song p{
+    color: #777;
+    font-size: 12px;
+}
+
+.song .body{
+    margin-left: 18px;
+    flex: 1;
+}
+
+.song .option{
+    color:rgb(102, 102, 102);
+    font-size: 16px;
+}
+
+.btn.active{
+    color: var(--primary-color);
+}
+
+.song.active{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.song.active .option,
+.song.active p{
+    color: white;
+}
